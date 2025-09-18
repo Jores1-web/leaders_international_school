@@ -1,0 +1,431 @@
+
+/* HERO (carrousel) en plein écran */
+#carouselExampleCaptions .carousel-item img {
+    height: 100vh; /* occupe tout l'écran */
+    object-fit: cover; /* évite la déformation */
+}
+
+/* Overlay sombre */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* noir transparent */
+    z-index: 1; /* sous le texte mais au-dessus de l'image */
+}
+
+/* Texte bien visible au centre */
+#carouselExampleCaptions .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* au-dessus de l’overlay */
+    width: 80%; /* largeur du texte */
+}
+
+.carousel-caption h1{
+    font-size: 4rem; /* Augmenter la taille pour une meilleure lisibilité */
+    font-weight: 700; /* Police plus épaisse */
+    margin-bottom: 15px;
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    text-transform: uppercase; /* Mettre le titre en majuscules pour un effet plus professionnel */
+}
+
+.carousel-caption p {
+    font-size: 1.8rem; /* Augmenter la taille pour mieux capter l'attention */
+    font-weight: 400;
+    line-height: 1.6; /* Espacement entre les lignes pour plus de clarté */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre subtile pour la lisibilité */
+}
+
+/* Réduction de la taille des images pour une meilleure adaptation sur les petits écrans */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
+
+.about{
+    padding-top: 60px;
+}
+.best{
+    font-size: 25px;
+    font-weight: 450;
+    text-align: justify;
+}
+
+.sectenroll{
+    padding: 30px;
+}
+
+.ima{
+    width: 100%;
+    height: auto;
+    border-radius: 80px;
+}
+
+.about .row {
+    display: flex;
+    align-items: center; /* centre verticalement */
+}
+
+.about h1 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about p.best {
+    text-align: justify; /* justifie ton texte */
+    line-height: 1.6;
+}
+
+/* SECTION Pourquoi nous choisir */
+#why-choose-us {
+  background: #f9f9ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#why-choose-us .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0362c5;
+  font-weight: bold;
+}
+
+#why-choose-us .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+#why-choose-us .card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+#why-choose-us .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+#why-choose-us .card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#why-choose-us .card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0362c5;
+}
+
+#why-choose-us .card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.programs {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0362c5;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.program-card {
+  position: relative;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.program-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.program-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.program-content {
+  position: relative;
+  padding: 20px;
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+}
+
+.program-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.program-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Section Chiffres Clés */
+.stats-section {
+  background: linear-gradient(135deg, #0362c5, #4dabf7);
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.stats-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box h3 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.stat-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+footer {
+    background: #053a74;
+    color: #ffffff;
+    padding: 60px 0 30px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(45deg, #0f9921, #04ff26);
+    transform: rotate(-2deg);
+    z-index: 0;
+}
+
+footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+footer h4 {
+    color: #FFD700;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, transparent);
+}
+
+footer p {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+footer button {
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+    color: #1a1e2c;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+}
+
+footer button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,215,0,0.5);
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.social-icons a:hover::before {
+    left: 100%;
+}
+
+.social-icons a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateX(10px);
+}
+
+.social-icons i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+footer a:hover {
+    color: #FFD700;
+}
+
+footer a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFD700;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+.c {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,215,0,0.2);
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* Animation au scroll */
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+footer .row:first-child {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer::before {
+        top: -30px;
+        height: 60px;
+    }
+    
+    footer .col-md-3 {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-icons a {
+        max-width: 250px;
+        margin: 8px auto;
+    }
+}
+
+/*nnnnn*/
