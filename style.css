@@ -54,218 +54,118 @@
 }
 
 :root {
-    --primary-color: #1a4f8b;
-    --secondary-color: #f8b739;
-    --accent-color: #e63946;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-}
-
-.navbar-custom {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2c6cb0 100%);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1rem;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: white !important;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand i {
-    color: var(--secondary-color);
-    font-size: 1.8rem;
-}
-
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important;
-    font-weight: 500;
-    padding: 0.8rem 1rem !important;
-    margin: 0 0.1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.navbar-nav .nav-link:hover, 
-.navbar-nav .nav-link:focus {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--secondary-color);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::after {
-    width: 70%;
-}
-
-.navbar-nav .nav-link.active {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.navbar-nav .nav-link.active::after {
-    width: 70%;
-    background: var(--secondary-color);
-}
-
-.navbar-toggler {
-    border: none;
-    color: white !important;
-    padding: 0.5rem;
-    order: 2;
-}
-
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-}
-
-/* Style pour l'icône de fermeture personnalisée */
-.close-menu {
-    display: none;
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    color: white;
-    font-size: 2rem;
-    z-index: 1050;
-    background: var(--accent-color);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.close-menu:hover {
-    background: #c1121f;
-    transform: scale(1.1);
-}
-
-/* Cacher la checkbox */
-#navbar-toggle {
-    display: none;
-}
-
-/* Quand la checkbox est cochée, montrer le menu */
-#navbar-toggle:checked ~ .navbar-collapse {
-    display: block !important;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--primary-color);
-    z-index: 1040;
-    padding: 4rem 1rem 1rem;
-    overflow-y: auto;
-}
-
-#navbar-toggle:checked ~ .close-menu {
-    display: block;
-}
-
-/* Cacher le toggler original quand le menu est ouvert */
-#navbar-toggle:checked ~ .navbar-toggler {
-    display: none;
-}
-
-.cta-button {
-    background-color: var(--secondary-color);
-    color: var(--dark-color) !important;
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem !important;
-    font-weight: 600;
-    margin-left: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #ffc857;
-    color: var(--dark-color) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 991px) {
-    .navbar-nav .nav-link {
-        padding: 0.7rem 1rem !important;
-        margin: 0.2rem 0;
-        text-align: center;
-        font-size: 1.1rem;
-    }
-    
-    .cta-button {
-        margin: 0.5rem 0 0 0;
-        display: inline-block;
-        width: auto;
-    }
-    
-    /* Réorganisation pour mobile */
-    .navbar-custom .container-fluid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .navbar-brand {
-        order: 1;
-        font-size: 1.5rem;
-    }
-    
-    .navbar-toggler {
-        order: 2;
-    }
-    
-    .navbar-collapse {
-        order: 3;
-        flex-basis: 100%;
-    }
-    
-    /* Ajustement pour les écrans très petits */
-    @media (max-width: 360px) {
-        .navbar-brand {
-            font-size: 1.3rem;
+            --primary-color: #1a4f8b;
+            --secondary-color: #f8b739;
+            --accent-color: #e63946;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
         }
         
-        .close-menu {
-            top: 1rem;
-            right: 1rem;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 1.5rem;
+        /* Styles de la navbar */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c6cb0 100%) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 1rem;
         }
-    }
-}
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand i {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            padding: 0.8rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover, 
+        .nav-link:focus {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        
+        .nav-link.active {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .nav-link.active::after {
+            width: 70%;
+            background: var(--secondary-color);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: white !important;
+            padding: 0.5rem;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Media queries pour le responsive */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: var(--primary-color);
+                padding: 1rem;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 0.5rem;
+            }
+            
+            .nav-link {
+                padding: 0.7rem 1rem !important;
+                margin: 0.2rem 0;
+                text-align: center;
+            }
+        }
+        
+        /* Styles pour le contenu de démonstration */
+        .demo-content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
 
-/* Animation d'apparition pour le menu */
-.navbar-collapse {
-    transition: transform 0.3s ease-out;
-    transform: translateY(-100%);
-}
-
-#navbar-toggle:checked ~ .navbar-collapse {
-    transform: translateY(0);
-}
 
 .about-section {
   padding: 80px 0;
