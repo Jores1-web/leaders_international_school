@@ -116,7 +116,6 @@
   100% {opacity: 1; transform: translateY(0);}
 }
 
-
 /* SECTION Pourquoi nous choisir */
 #why-choose-us {
   background: #f9f9ff;
@@ -337,6 +336,85 @@
   background: #0362c5;
 }
 
+.testimonials {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f9f9f9 0%, #eef5ff 100%);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #0362c5;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.parent-photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #0362c5;
+}
+
+.testimonial-card p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #444;
+  line-height: 1.7;
+  min-height: 120px; /* équilibre les hauteurs */
+}
+
+.testimonial-card h5 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #0362c5;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  background: #0362c5;
+  color: #fff;
+  border: none;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none; /* caché au début */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #024a94;
+  transform: scale(1.1);
+}
 
 footer {
     background: #053a74;
