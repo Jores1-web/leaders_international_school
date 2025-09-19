@@ -394,6 +394,13 @@
   color: #0362c5;
 }
 
+/* Espace entre les cartes en version mobile */
+@media (max-width: 767px) {
+  .testimonial-card {
+    margin-bottom: 25px;
+  }
+}
+
 #backToTop {
   position: fixed;
   bottom: 25px;
