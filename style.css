@@ -65,7 +65,6 @@
     background: linear-gradient(135deg, var(--primary-color) 0%, #2c6cb0 100%);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
 }
 
 .navbar-brand {
@@ -128,10 +127,64 @@
     border: none;
     color: white !important;
     padding: 0.5rem;
+    order: 2;
 }
 
 .navbar-toggler:focus {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Style pour l'icône de fermeture personnalisée */
+.close-menu {
+    display: none;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    z-index: 1050;
+    background: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+    background: #c1121f;
+    transform: scale(1.1);
+}
+
+/* Cacher la checkbox */
+#navbar-toggle {
+    display: none;
+}
+
+/* Quand la checkbox est cochée, montrer le menu */
+#navbar-toggle:checked ~ .navbar-collapse {
+    display: block !important;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    z-index: 1040;
+    padding: 4rem 1rem 1rem;
+    overflow-y: auto;
+}
+
+#navbar-toggle:checked ~ .close-menu {
+    display: block;
+}
+
+/* Cacher le toggler original quand le menu est ouvert */
+#navbar-toggle:checked ~ .navbar-toggler {
+    display: none;
 }
 
 .cta-button {
@@ -152,16 +205,11 @@
 }
 
 @media (max-width: 991px) {
-    .navbar-collapse {
-        background-color: var(--primary-color);
-        padding: 1rem;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
     .navbar-nav .nav-link {
         padding: 0.7rem 1rem !important;
         margin: 0.2rem 0;
+        text-align: center;
+        font-size: 1.1rem;
     }
     
     .cta-button {
@@ -169,6 +217,54 @@
         display: inline-block;
         width: auto;
     }
+    
+    /* Réorganisation pour mobile */
+    .navbar-custom .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navbar-brand {
+        order: 1;
+        font-size: 1.5rem;
+    }
+    
+    .navbar-toggler {
+        order: 2;
+    }
+    
+    .navbar-collapse {
+        order: 3;
+        flex-basis: 100%;
+    }
+    
+    /* Ajustement pour les écrans très petits */
+    @media (max-width: 360px) {
+        .navbar-brand {
+            font-size: 1.3rem;
+        }
+        
+        .close-menu {
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* Animation d'apparition pour le menu */
+.navbar-collapse {
+    transition: transform 0.3s ease-out;
+    transform: translateY(-100%);
+}
+
+#navbar-toggle:checked ~ .navbar-collapse {
+    transform: translateY(0);
 }
 
 .about-section {

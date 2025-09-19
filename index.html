@@ -14,8 +14,11 @@
 </head>
 <body>
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
+            <!-- Checkbox invisible pour contrôler l'état du menu -->
+            <input type="checkbox" id="navbar-toggle">
+            
             <!-- Logo / Nom -->
             <a class="navbar-brand" href="#">
                 <i class="bi bi-mortarboard-fill me-2"></i>
@@ -23,41 +26,52 @@
             </a>
 
             <!-- Bouton toggle pour mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <label class="navbar-toggler" for="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </label>
+            
+            <!-- Icône de fermeture - BIEN VISIBLE MAINTENANT -->
+            <label class="close-menu" for="navbar-toggle">
+                <i class="bi bi-x-lg"></i>
+            </label>
 
             <!-- Liens de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#about">À propos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Programmes</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Internat</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Actualités & Événements</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Espace parents</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Contacts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link cta-button" href="#">
-                        <i class="bi bi-pencil-square me-1"></i> Pré-inscription
-                    </a>
-                </li>
-            </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Programmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Internat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Actualités & Événements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Espace parents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                    <li class="nav-item d-lg-none mt-3">
+                        <a class="nav-link cta-button" href="#">
+                            <i class="bi bi-pencil-square me-1"></i> Pré-inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Bouton CTA pour desktop -->
+            <div class="d-none d-lg-block">
+                <a class="nav-link cta-button" href="#">
+                    <i class="bi bi-pencil-square me-1"></i> Pré-inscription
+                </a>
             </div>
         </div>
     </nav>
