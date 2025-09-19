@@ -53,39 +53,69 @@
     }
 }
 
-.about{
-    padding-top: 60px;
-}
-.best{
-    font-size: 25px;
-    font-weight: 450;
-    text-align: justify;
+.about-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+  position: relative;
 }
 
-.sectenroll{
-    padding: 30px;
+.about-section.alt {
+  background: linear-gradient(135deg, #0362c5 0%, #004080 100%);
+  color: #fff;
 }
 
-.ima{
-    width: 100%;
-    height: auto;
-    border-radius: 80px;
+.about-section h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.about .row {
-    display: flex;
-    align-items: center; /* centre verticalement */
+.about-section h1::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ffcc00;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
-.about h1 {
-    font-weight: bold;
-    margin-bottom: 15px;
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
-.about p.best {
-    text-align: justify; /* justifie ton texte */
-    line-height: 1.6;
+.about-section p span {
+  color: #ffcc00;
+  font-weight: 600;
 }
+
+.ima {
+  width: 100%;
+  border-radius: 25px;
+  transition: transform 0.4s ease;
+}
+
+.ima:hover {
+  transform: scale(1.05);
+}
+
+.shadow {
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Animation apparition */
+.about-section .content {
+  animation: fadeInUp 1.2s ease both;
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(40px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
 
 /* SECTION Pourquoi nous choisir */
 #why-choose-us {
