@@ -29,3 +29,13 @@ if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
 backToTop.addEventListener("click", () => {
 window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});

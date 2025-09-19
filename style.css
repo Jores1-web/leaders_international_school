@@ -53,6 +53,61 @@
     }
 }
 
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important; /* léger effet transparent */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease-in-out;
+  padding: 12px 0;
+}
+
+/* Au scroll */
+.navbar.scrolled {
+  background: #0362c5 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0362c5 !important;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #024a94 !important;
+}
+
+/* Liens */
+.nav-link {
+  font-weight: 500;
+  margin-left: 18px;
+  color: #333 !important;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #0362c5 !important;
+  transform: translateY(-2px);
+}
+
+/* Actif */
+.nav-link.active {
+  color: #0362c5 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #0362c5;
+}
+
+/* Bouton hamburger mobile */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .about-section {
   padding: 80px 0;
   background: #f9f9f9;
