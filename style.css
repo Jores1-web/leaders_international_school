@@ -67,6 +67,10 @@
             background: linear-gradient(135deg, var(--primary-color) 0%, #2c6cb0 100%) !important;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             padding: 0.8rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         
         .navbar-brand {
@@ -490,6 +494,7 @@
   padding: 30px 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
+  min-height: 650px;
 }
 
 .testimonial-card:hover {
@@ -497,8 +502,8 @@
 }
 
 .parent-photo {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -509,8 +514,7 @@
   font-size: 1.05rem;
   font-style: italic;
   color: #444;
-  line-height: 1.7;
-  min-height: 120px; /* équilibre les hauteurs */
+  line-height: 1.7; 
 }
 
 .testimonial-card h5 {
@@ -535,7 +539,7 @@
   color: #fff;
   border: none;
   padding: 15px 18px;
-  border-radius: 50%;
+  border-radius: 20%;
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -564,7 +568,7 @@ footer::before {
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(45deg, #0f9921, #04ff26);
+    background: linear-gradient(45deg, #FFA500, #FFD700);
     transform: rotate(-2deg);
     z-index: 0;
 }
@@ -604,7 +608,7 @@ footer p {
 
 footer button {
     background: linear-gradient(45deg, #FFA500, #FFD700);
-    color: #1a1e2c;
+    color: #053a74;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
