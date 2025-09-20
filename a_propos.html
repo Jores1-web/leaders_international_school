@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
@@ -57,70 +58,42 @@
     </nav>
 
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-        </div>
-
-        <div class="carousel-inner">
-            <!-- SLIDE 1 -->
-            <div class="carousel-item active">
-                <img src="images/caroussel1.JPG" class="d-block w-100" alt="Ambassadrice et élève">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h1>Une éducation sans frontières</h1>
-                    <p>Grâce à notre partenariat avec l’Ambassade du Ghana, Leaders International School offre une formation bilingue solide et ouverte sur l’international.</p>
-                </div>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="carousel-item">
-                <img src="images/spr.jpg" class="d-block w-100" alt="Enfants en tenue de sport">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h1>Un esprit sain dans un corps sain</h1>
-                    <p>Nos programmes sportifs développent la discipline, l’esprit d’équipe et la confiance en soi.</p>
-                </div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="carousel-item">
-                <img src="images/assembly.jpg" class="d-block w-100" alt="Assemblée et prière">
-                <div class="carousel-overlay">
-                    <div class="carousel-caption">
-                        <h1>Former des leaders responsables</h1>
-                        <p>La prière et la présentation du drapeau cultivent foi, discipline et respect des valeurs.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <section class="about-section" data-aos="fade-right">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6 content">
-            <h1>Qui sommes-nous ?</h1>
-            <p>Nous sommes <span>les leaders</span>, les modèles, les icônes, les entrepreneurs qui impacteront le monde de demain.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="images/LIS.jpg" alt="Leaders International School" class="ima shadow">
-        </div>
-        </div>
-    </div>
+    <!-- ================== BANNIÈRE ================== -->
+    <section class="about-banner d-flex align-items-center justify-content-center text-center text-white">
     </section>
+    
+    <!-- ================== HISTOIRE ================== -->
+    <section class="history-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <span class="year-badge">2019</span>
+                    <h2 class="fw-bold mb-3">Notre histoire</h2>
+                    <p>
+                        Fondée en <strong>2019</strong> par 
+                        <strong>Cyrille HOUETIN</strong> et <strong>Constance HOUNAKE</strong>, 
+                        Leaders International School est née de la volonté de former une génération de véritables leaders.
+                    </p>
+                    
+                    <div class="founders-highlight">
+                        <p>
+                            Grâce à une collaboration continue avec l’ambassade du Ghana, 
+                            l’école intègre un programme bilingue unique alliant l’Approche Par Compétences (APC) du Bénin et le curriculum ghanéen.
+                        </p>
+                    </div>
+                    
+                    <p>
+                        Aujourd’hui, nous sommes reconnus comme une institution innovante qui mise sur l’excellence académique, 
+                        mais aussi sur la formation culturelle, sportive et humaine de ces élèves.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/ecole.jpg" alt="Notre école" class="img-fluid rounded-4 shadow history-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="about-section alt" data-aos="fade-left">
     <div class="container">
@@ -150,48 +123,98 @@
     </div>
     </section>
 
-    <!-- SECTION : Pourquoi nous choisir -->
-    <section id="why-choose-us">
-    <div class="container">
-        <h2 class="section-title">Pourquoi nous choisir ?</h2>
-        <div class="cards">
-        <!-- Bloc 1 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🌍</div>
-            <h3>Programme bilingue unique (Bénin – Ghana)</h3>
-            <p>Un double curriculum (APC – Bénin et curriculum ghanéen) qui ouvre les portes aux opportunités nationales et internationales.</p>
+    <!-- ================== VALEURS ================== -->
+<section class="values-section">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <h2 class="fw-bold">Nos valeurs clés</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="value-card">
+                        <i class="bi bi-mortarboard-fill value-icon"></i>
+                        <h5 class="mt-2">Excellence</h5>
+                        <p>Viser toujours les meilleurs résultats académiques.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="value-card">
+                        <i class="bi bi-alarm value-icon"></i>
+                        <h5 class="mt-2">Discipline</h5>
+                        <p>Développer rigueur et sens des responsabilités.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="value-card">
+                        <i class="bi bi-lightbulb-fill value-icon"></i>
+                        <h5 class="mt-2">Innovation</h5>
+                        <p>Utiliser des méthodes pédagogiques modernes.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="value-card">
+                        <i class="bi bi-people-fill value-icon"></i>
+                        <h5 class="mt-2">Solidarité</h5>
+                        <p>Vivre ensemble dans le respect et la fraternité.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Bloc 2 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">👩‍🏫</div>
-            <h3>Encadrement de qualité</h3>
-            <p>Des enseignants qualifiés et formés au leadership scolaire pour inspirer et guider chaque élève.</p>
+    <!-- ================== ÉQUIPE ================== -->
+    <section class="team-section">
+        <div class="container-custom">
+        <div class="team-header">
+            <h1>Notre Équipe de Direction</h1>
+            <p>Des leaders passionnés dévoués à l'excellence éducative</p>
         </div>
-
-        <!-- Bloc 3 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">⚽🎨🥋</div>
-            <h3>Activités extrascolaires</h3>
-            <p>Sports, danse, art, karaté… pour développer la créativité, la confiance et l’esprit d’équipe.</p>
-        </div>
-
-        <!-- Bloc 4 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🏫</div>
-            <h3>Internat moderne et sécurisé</h3>
-            <p>Pour accueillir les élèves venant d’autres villes ou pays, avec un cadre favorable aux études.</p>
-        </div>
-
-        <!-- Bloc 5 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🏅</div>
-            <h3>Résultats prouvés</h3>
-            <p>100 % de réussite au CEP et BECE Ghana 2025 – une preuve de notre excellence académique.</p>
-        </div>
+        
+        <div class="team-content">
+            <div class="leadership-section">
+                <h2 class="section-title">Leaders Visionnaires</h2>
+                
+                <div class="leader-container">
+                    <!-- Fondateur -->
+                    <div class="leader-card">
+                        <div class="leader-img-container">
+                            <img src="images/fondateur.jpg" alt="Cyrille HOUETIN" class="leader-img">
+                            <div class="leader-overlay">
+                                <i class="bi bi-award-fill"></i>
+                            </div>
+                        </div>
+                        <div class="quote-mark">"</div>
+                        <h3 class="leader-name">Cyrille HOUETIN</h3>
+                        <p class="leader-role">Fondateur</p>
+                        <p class="leader-desc">Visionnaire passionné par l'éducation, il a créé Leaders International School avec la conviction que chaque enfant peut devenir un leader.</p>
+                    </div>
+                    
+                    <!-- Directrice -->
+                    <div class="leader-card">
+                        <div class="leader-img-container">
+                            <img src="images/directrice.jpg" alt="Constance HOUNAKE" class="leader-img">
+                            <div class="leader-overlay">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                        </div>
+                        <div class="quote-mark">"</div>
+                        <h3 class="leader-name">Constance HOUNAKE</h3>
+                        <p class="leader-role">Directrice</p>
+                        <p class="leader-desc">Pédagogue expérimentée, elle dirige notre institution avec dynamisme et assure l'excellence académique au quotidien.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teachers-section">
+                <h2 class="section-title">Notre Équipe Pédagogique</h2>
+                <img src="images/enseignants.jpg" alt="Équipe enseignante" class="teachers-img">
+                <p class="img-caption">Notre équipe enseignante dévouée et qualifiée</p>
+            </div>
         </div>
     </div>
+
     </section>
+    
 
     <!-- Section Chiffres Clés -->
     <section class="stats-section" class="py-5 text-white" style="background:#0362c5;" data-aos="fade-up">
@@ -294,93 +317,6 @@
     </div>
     </section>
 
-    <section class="testimonials" data-aos="fade-up">
-    <div class="container">
-        <h2 class="section-title">Ils nous font confiance</h2>
-        <div class="row">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="testimonial-card">
-            <img src="images/parent1.jpg" alt="Parent 1" class="parent-photo">
-            <p>"Moi j'ai pas eu la chance d'apprendre l'anglais, donc j'ai toujours voulu donné cette chance à mon
-                enfant. J'étais toujours dans l'optique de trouver une école qui pourrait vraiment répondre à ça et je 
-                pense qu'on a eu la solution pour lui, on s'occuppe très bien de lui. Il est en maternelle 2 et je vois 
-                déjà beaucoup d'amélioration, il parle, il s'exprime bien, il arrive à se débrouiller. Je félicite
-                Leaders International School pour ce que vous faites pour les enfants."   
-            </p>
-            <h5>- M. Raunad SAGBOHAN alias Rauny Beatz</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/parent5.jpg" alt="Parent 5" class="parent-photo">
-            <p>"C'est une très bonne école. Une seule année suffit pour que votre enfant sache 
-                très bien s'exprimer en anglais. Ma fille, je l'ai inscrite, cette année, elle
-                à commencer la 6e. Elle ne savait pratiquement rien dire en anglais bien qu'elle 
-                avait fait une école bilingue comme on le dit, une école bilingue au primaire quoi.
-                Mais elle n'arrivait pas du tout à s'exprimer en anglais. Quand on l'a inscrite dans
-                cette école elle s'exprime déjà couremment après 6 mois et je suis vraiment très contente.
-                Donc je vous recommande l'école Leaders International School."</p>
-            <h5> </h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/parent3.jpg" alt="Parent 3" class="parent-photo">
-            <p>"Je conseil aux nouveaux parents de venir inscrire leurs enfants à Leaders 
-                International School parce que là j'ai fait l'expérience des écoles nigérianes,
-                des écoles béninoises et de Leaders International School. En comparant j'ai vu que 
-                Leaders International School est le meilleur parce que c'est des béninois qui
-                sont devant et ça montre la collaboration entre le Bénin, le Ghana et les Etats-Unis, et les
-                enfants parlent bien l'anglais à la maison."
-            </p>
-            <h5>- M. Fortuné HOUENON</h5>
-            </div>
-        </div>
-        </div>
-    </br>
-        <div class="row">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="testimonial-card">
-            <img src="images/parent4.jpg" alt="Parent 4" class="parent-photo">
-            <p>"Depuis que j'ai inscrit mes deux enfants, je note une progression immense à leur niveau.
-                Ce qui m'a le plus marqué dans leur évolution depuis qu'ils sont dans cette école, c'est
-                que déjà au CI les enfants sont vraiment dépendant en lecture. Mon premier à commencer par
-                lire tout seul, n'importe quel texte qu'il voit à n'importe quel endroit, il te déchiffre ça,
-                il te lit ça. Et vraiment, c'est à l'actif de l'école, je voudrais vraiment recommander cette
-                école à chaque parent. N'hésitez pas. Moi, c'est une amie qui m'a orienté et je n'ai pas du tout
-                regretté. N'hésitez pas, pour ceux qui sont encore dans l'hésitation, sautez les pas, envoyez vos
-                enfants. A Leaders International School, ce sont de vrais leaders qui sont formés pour l'avenir 
-                et cerains de demain."   
-            </p>
-            <h5>- Mme. ESSOUN Rosemonde</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/parent6.jpg" alt="Parent 6"  class="parent-photo">
-            <p>"Leaders International School est vraiment une référence en matière d'enseignement de 
-                qualité. Moi je recommande vivement les gens à venir, surtout quand on sait un peu 
-                l'alliage entre le français et l'anglais qui se font ici."</p>
-            <h5>- M. NATTA M'PO</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/parent2.jpg" alt="Parent 2" class="parent-photo">
-            <p>"Nous remerçions beaucoup cette école pour cette initiative, pour la manière d'enseigner 
-                l'anglais à nos enfants. Déjà à la maternelle, ils s'expriment en anglais avec l'accent 
-                tout et tout."
-            </p>
-            <h5>- Mme Nancy GANDAHO</h5>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-
-
-
-
 
     <button id="backToTop" title="Retour en haut">↑</button>
 
@@ -395,13 +331,13 @@
 				</div>
 				<div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
 					<h4>Liens utiles</h4>
-					<p><a href="#">Accueil</a></p>
-					<p><a href="#about">À propos</a></p>
-					<p><a href="#">Programmes</a></p>
-					<p><a href="#">Internat</a></p>
-                    <p><a href="#">Actualités & Evênements</a></p>
-                    <p><a href="#">Espace parents</a></p>
-					<p><a href="#footer">Contacts</a></p>
+					<p><a href="index.html">Accueil</a></p>
+					<p><a aria-current="page" href="#">À propos</a></p>
+					<p><a href="programmes.html">Programmes</a></p>
+					<p><a href="internat.html">Internat</a></p>
+                    <p><a href="actualites_evenements.html">Actualités & Evênements</a></p>
+                    <p><a href="espace_parents.html">Espace parents</a></p>
+					<p><a href="contacts.html">Contacts</a></p>
 				</div>
 				<div class="col-md-3" id="contact" data-aos="zoom-in" data-aos-delay="300">
 					<h4>Contactez-nous</h4>
@@ -415,7 +351,8 @@
 						<a href="https://www.facebook.com/Leadersinterschool"><i class="fab fa-facebook-f"></i> Facebook</a><br>
 						<a href="https://youtube.com/@leadersinternationalschool9166?si=WtIWTNfT-XACaViL"><i class="fab fa-youtube"></i> YouTube</a><br>
 						<a href="https://www.tiktok.com/@leadersintschool?_t=ZM-8tERKgfBPD4&_r=1"><i class="fab fa-tiktok"></i> TikTok</a>
-					</div>
+					    <a href="https://www.instagram.com/lis20194078?igsh=dmV5dDdteDRraHl2"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
 				</div> 
 			</div>
 			<div class="row" data-aos="fade-up" data-aos-delay="500">
