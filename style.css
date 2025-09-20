@@ -580,7 +580,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .about-banner {
-    height: 60vh; /* un peu plus petit sur mobile */
+    height: 30vh; /* un peu plus petit sur mobile */
   }
 }
 
