@@ -494,7 +494,6 @@
   padding: 30px 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
-  min-height: 650px;
 }
 
 .testimonial-card:hover {
@@ -539,7 +538,7 @@
   color: #fff;
   border: none;
   padding: 15px 18px;
-  border-radius: 20%;
+  border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
