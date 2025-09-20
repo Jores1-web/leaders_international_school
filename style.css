@@ -720,16 +720,6 @@ footer a:hover::after {
     letter-spacing: 1px;
 }
 
-/* Animation au scroll */
-@keyframes slideIn {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-footer .row:first-child {
-    animation: slideIn 0.8s ease-out forwards;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     footer::before {
