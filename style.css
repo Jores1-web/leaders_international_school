@@ -570,7 +570,7 @@
 /*PAGE A PRPS*/
 .about-banner {
   background: url('images/banner_about.jpg') center/cover no-repeat;
-  height: 130vh; /* occupe toute la hauteur de l'écran */
+  height: 140vh; /* occupe toute la hauteur de l'écran */
   position: relative;
   display: flex;
   align-items: center;
@@ -580,7 +580,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .about-banner {
-    height: 30vh; /* un peu plus petit sur mobile */
+    height: 25vh; /* un peu plus petit sur mobile */
   }
 }
 
@@ -792,7 +792,7 @@
         }
         @media (max-width: 767px) {
             .value-card {
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
     }
         
