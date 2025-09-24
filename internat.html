@@ -7,9 +7,257 @@
     <meta name="description" content="Leaders International School offre un enseignement bilingue et des programmes artistiques et sportifs de qualité à Abomey-Calavi.">
     <link rel="icon" href="images/Logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a4f8b;
+            --secondary-color: #f8b739;
+            --accent-color: #e63946;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        
+        .coming-soon-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 3rem;
+        }
+        
+        .school-header {
+            margin-bottom: 2rem;
+        }
+        
+        .school-logo {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .school-name {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .school-tagline {
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+        
+        .construction-icon {
+            font-size: 5rem;
+            color: var(--secondary-color);
+            margin: 2rem 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .page-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-description {
+            color: #495057;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .progress-container {
+            background: rgba(26, 79, 139, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 5px;
+            width: 75%;
+            animation: progress 2s ease-in-out;
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 75%; }
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .countdown-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            min-width: 80px;
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+        
+        .navigation-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-btn:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav-btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .nav-btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .contact-info p {
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .coming-soon-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .page-description {
+                font-size: 1.1rem;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 0.8rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .navigation-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .school-name {
+                font-size: 1.8rem;
+            }
+            
+            .construction-icon {
+                font-size: 4rem;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 
 </head>
 <body>
@@ -57,326 +305,69 @@
     </nav>
 
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-        </div>
-
-        <div class="carousel-inner">
-            <!-- SLIDE 1 -->
-            <div class="carousel-item active">
-                <img src="images/caroussel1.JPG" class="d-block w-100" alt="Ambassadrice et élève">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h1>Une éducation sans frontières</h1>
-                    <p>Grâce à notre partenariat avec l’Ambassade du Ghana, Leaders International School offre une formation bilingue solide et ouverte sur l’international.</p>
-                </div>
+    <div class="coming-soon-container">
+        <div class="school-header">
+            <div class="school-logo">
+                <i class="bi bi-mortarboard-fill"></i>
             </div>
-
-            <!-- SLIDE 2 -->
-            <div class="carousel-item">
-                <img src="images/spr.jpg" class="d-block w-100" alt="Enfants en tenue de sport">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h1>Un esprit sain dans un corps sain</h1>
-                    <p>Nos programmes sportifs développent la discipline, l’esprit d’équipe et la confiance en soi.</p>
-                </div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="carousel-item">
-                <img src="images/assembly.jpg" class="d-block w-100" alt="Assemblée et prière">
-                <div class="carousel-overlay">
-                    <div class="carousel-caption">
-                        <h1>Former des leaders responsables</h1>
-                        <p>La prière et la présentation du drapeau cultivent foi, discipline et respect des valeurs.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <section class="about-section" data-aos="fade-right">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6 content">
-            <h1>Qui sommes-nous ?</h1>
-            <p>Nous sommes <span>les leaders</span>, les modèles, les icônes, les entrepreneurs qui impacteront le monde de demain.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="images/LIS.jpg" alt="Leaders International School" class="ima shadow">
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <section class="about-section alt" data-aos="fade-left">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6">
-            <img src="images/bece_can.jpg" alt="Notre vision" class="ima shadow">
-        </div>
-        <div class="col-md-6 content">
-            <h1>Notre vision</h1>
-            <p>Être le meilleur et l’unique établissement standard qui offre un <span>programme bilingue d’excellence</span> dès le bas-âge, reconnu parmi les meilleures écoles du Bénin et du monde.</p>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <section class="about-section" data-aos="fade-right">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6 content">
-            <h1>Notre mission</h1>
-            <p>Diffuser le pouvoir de l’<span>optimisme</span> et de la <span>connaissance</span> à travers une éducation de qualité, afin de préparer les élèves à réussir dans le monde académique, scientifique, technique et professionnel, sans barrière.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="images/grad.jpg" alt="Notre mission" class="ima shadow">
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- SECTION : Pourquoi nous choisir -->
-    <section id="why-choose-us">
-    <div class="container">
-        <h2 class="section-title">Pourquoi nous choisir ?</h2>
-        <div class="cards">
-        <!-- Bloc 1 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🌍</div>
-            <h3>Programme bilingue unique (Bénin – Ghana)</h3>
-            <p>Un double curriculum (APC – Bénin et curriculum ghanéen) qui ouvre les portes aux opportunités nationales et internationales.</p>
-        </div>
-
-        <!-- Bloc 2 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">👩‍🏫</div>
-            <h3>Encadrement de qualité</h3>
-            <p>Des enseignants qualifiés et formés au leadership scolaire pour inspirer et guider chaque élève.</p>
-        </div>
-
-        <!-- Bloc 3 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">⚽🎨🥋</div>
-            <h3>Activités extrascolaires</h3>
-            <p>Sports, danse, art, karaté… pour développer la créativité, la confiance et l’esprit d’équipe.</p>
-        </div>
-
-        <!-- Bloc 4 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🏫</div>
-            <h3>Internat moderne et sécurisé</h3>
-            <p>Pour accueillir les élèves venant d’autres villes ou pays, avec un cadre favorable aux études.</p>
-        </div>
-
-        <!-- Bloc 5 -->
-        <div class="card" data-aos="zoom-in">
-            <div class="icon">🏅</div>
-            <h3>Résultats prouvés</h3>
-            <p>100 % de réussite au CEP et BECE Ghana 2025 – une preuve de notre excellence académique.</p>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- Section Chiffres Clés -->
-    <section class="stats-section" class="py-5 text-white" style="background:#0362c5;" data-aos="fade-up">
-    <div class="container">
-        <h2 class="stats-title">Nos chiffres parlent d’eux-mêmes</h2>
-        <div class="stats-grid">
-        <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>Réussite au BECE 2025</p>
-        </div>
-        <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>Réussite au CEP 2025</p>
-        </div>
-        <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="counter" data-target="5">0</h3>
-            <p>+ de 5 années d’expérience et d’innovation</p>
-        </div>
-        <div class="stat-box" data-aos="fade-up" data-aos-delay="400">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>Parents satisfaits</p>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <section id="programs" class="programs" class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
-        <h2 class="section-title">Nos Programmes</h2>
-        <div class="program-grid">
-        
-        <div class="program-card" style="background-image: url('images/bilingue.jpg');" data-aos="zoom-in" data-aos-delay="100">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Programme bilingue</h3>
-            <p>Un double curriculum (APC & ghanéen) pour préparer nos élèves à un avenir international.</p>
-            </div>
+            <h1 class="school-name">Leaders International School</h1>
+            <p class="school-tagline">L'excellence éducative dans un environnement international</p>
         </div>
         
-        <div class="program-card" style="background-image: url('images/sport.jpg');" data-aos="zoom-in" data-aos-delay="200">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Activités sportives</h3>
-            <p>Développer discipline, esprit d’équipe et confiance en soi à travers le sport.</p>
-            </div>
+        <div class="construction-icon">
+            <i class="bi bi-tools"></i>
         </div>
         
-        <div class="program-card" style="background-image: url('images/danse.jpg');" data-aos="zoom-in" data-aos-delay="300">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Danse & culture</h3>
-            <p>Découvrir la richesse des traditions par la danse, le rythme et l’expression corporelle.</p>
-            </div>
-        </div>
+        <h2 class="page-title">Page en construction</h2>
         
-        <div class="program-card" style="background-image: url('images/extra.jpg');" data-aos="zoom-in" data-aos-delay="400">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Activités extrascolaires</h3>
-            <p>Stimuler la créativité et développer les talents artistiques de chaque élève.</p>
-            </div>
-        </div>
-        
-        <div class="program-card" style="background-image: url('images/karate.jpg');" data-aos="zoom-in" data-aos-delay="500">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Karaté</h3>
-            <p>Renforcer la discipline, la confiance en soi et l’harmonie entre corps et esprit.</p>
-            </div>
-        </div>
-
-        <div class="program-card" style="background-image: url('images/internat.jpg');" data-aos="zoom-in" data-aos-delay="600">
-            <div class="overlay"></div>
-            <div class="program-content">
-            <h3>Internat</h3>
-            <p>Un cadre sécurisé et propice à l’étude pour élèves venus d’ailleurs.</p>
-            </div>
-        </div>
-        
-        </div>
-    </div>
-    </section>
-
-    <!-- SECTION CTA PREMIUM AVEC VIDEO -->
-    <section class="cta-video" class="position-relative text-center text-white" data-aos="zoom-in">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="videos/cta-background.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo HTML5.
-    </video>
-    
-    <div class="cta-overlay">
-        <div class="cta-content" class="position-absolute top-50 start-50 translate-middle w-75">
-        <h2>Rejoignez la grande famille de Leaders International School</h2>
-        <p>
-            Offrez à votre enfant une éducation bilingue, des valeurs fortes et un avenir sans limites.
-            </br>📚 Inscriptions ouvertes pour 2025 – 2026 !
+        <p class="page-description">
+            Nous travaillons actuellement sur cette section pour vous offrir une expérience optimale. 
+            Revenez bientôt pour découvrir du nouveau contenu passionnant sur nos programmes éducatifs.
         </p>
-        <a href="#contact" class="cta-btn">📩 Inscrire mon enfant</a>
+        
+        <div class="progress-container">
+            <div class="progress-text">
+                <span>Progression</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">15</div>
+                <div class="countdown-label">Jours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">08</div>
+                <div class="countdown-label">Heures</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">42</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">30</div>
+                <div class="countdown-label">Secondes</div>
+            </div>
+        </div>
+        
+        <div class="navigation-links">
+            <a href="index.html" class="nav-btn">
+                <i class="bi bi-house-fill"></i> Retour à l'accueil
+            </a>
+            <a href="contacts.html" class="nav-btn nav-btn-secondary">
+                <i class="bi bi-envelope-fill"></i> Nous contacter
+            </a>
+        </div>
+        
+        <div class="contact-info">
+            <p><i class="bi bi-telephone-fill me-2"></i> +229 90 38 38 31</p>
+            <p><i class="bi bi-envelope-fill me-2"></i> leadersinterschool@gmail.com</p>
         </div>
     </div>
-    </section>
-
-    <section class="testimonials" data-aos="fade-up">
-    <div class="container">
-        <h2 class="section-title">Ils nous font confiance</h2>
-        <div class="row">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="testimonial-card">
-            <img src="images/parent1.jpg" alt="Parent 1" class="parent-photo">
-            <p>"Moi j'ai pas eu la chance d'apprendre l'anglais, donc j'ai toujours voulu donné cette chance à mon
-                enfant. J'étais toujours dans l'optique de trouver une école qui pourrait vraiment répondre à ça et je 
-                pense qu'on a eu la solution pour lui, on s'occuppe très bien de lui. Il est en maternelle 2 et je vois 
-                déjà beaucoup d'amélioration, il parle, il s'exprime bien, il arrive à se débrouiller. Je félicite
-                Leaders International School pour ce que vous faites pour les enfants."   
-            </p>
-            <h5>- M. Raunad SAGBOHAN alias Rauny Beatz</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/parent5.jpg" alt="Parent 5" class="parent-photo">
-            <p>"C'est une très bonne école. Une seule année suffit pour que votre enfant sache 
-                très bien s'exprimer en anglais. Ma fille, je l'ai inscrite, cette année, elle
-                à commencer la 6e. Elle ne savait pratiquement rien dire en anglais bien qu'elle 
-                avait fait une école bilingue comme on le dit, une école bilingue au primaire quoi.
-                Mais elle n'arrivait pas du tout à s'exprimer en anglais. Quand on l'a inscrite dans
-                cette école elle s'exprime déjà couremment après 6 mois et je suis vraiment très contente.
-                Donc je vous recommande l'école Leaders International School."</p>
-            <h5> </h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/parent3.jpg" alt="Parent 3" class="parent-photo">
-            <p>"Je conseil aux nouveaux parents de venir inscrire leurs enfants à Leaders 
-                International School parce que là j'ai fait l'expérience des écoles nigérianes,
-                des écoles béninoises et de Leaders International School. En comparant j'ai vu que 
-                Leaders International School est le meilleur parce que c'est des béninois qui
-                sont devant et ça montre la collaboration entre le Bénin, le Ghana et les Etats-Unis, et les
-                enfants parlent bien l'anglais à la maison."
-            </p>
-            <h5>- M. Fortuné HOUENON</h5>
-            </div>
-        </div>
-        </div>
-    </br>
-        <div class="row">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="testimonial-card">
-            <img src="images/parent4.jpg" alt="Parent 4" class="parent-photo">
-            <p>"Depuis que j'ai inscrit mes deux enfants, je note une progression immense à leur niveau.
-                Ce qui m'a le plus marqué dans leur évolution depuis qu'ils sont dans cette école, c'est
-                que déjà au CI les enfants sont vraiment dépendant en lecture. Mon premier à commencer par
-                lire tout seul, n'importe quel texte qu'il voit à n'importe quel endroit, il te déchiffre ça,
-                il te lit ça. Et vraiment, c'est à l'actif de l'école, je voudrais vraiment recommander cette
-                école à chaque parent. N'hésitez pas. Moi, c'est une amie qui m'a orienté et je n'ai pas du tout
-                regretté. N'hésitez pas, pour ceux qui sont encore dans l'hésitation, sautez les pas, envoyez vos
-                enfants. A Leaders International School, ce sont de vrais leaders qui sont formés pour l'avenir 
-                et cerains de demain."   
-            </p>
-            <h5>- Mme. ESSOUN Rosemonde</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/parent6.jpg" alt="Parent 6"  class="parent-photo">
-            <p>"Leaders International School est vraiment une référence en matière d'enseignement de 
-                qualité. Moi je recommande vivement les gens à venir, surtout quand on sait un peu 
-                l'alliage entre le français et l'anglais qui se font ici."</p>
-            <h5>- M. NATTA M'PO</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/parent2.jpg" alt="Parent 2" class="parent-photo">
-            <p>"Nous remerçions beaucoup cette école pour cette initiative, pour la manière d'enseigner 
-                l'anglais à nos enfants. Déjà à la maternelle, ils s'expriment en anglais avec l'accent 
-                tout et tout."
-            </p>
-            <h5>- Mme Nancy GANDAHO</h5>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
 
 
 

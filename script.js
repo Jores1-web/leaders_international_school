@@ -49,3 +49,45 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             });
         });
+
+
+//Compte à rebours dynamique (exemple)
+        function updateCountdown() {
+            const days = document.getElementById('days');
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            // Date cible (15 jours dans le futur)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 15);
+            
+            function update() {
+                const now = new Date();
+                const difference = targetDate - now;
+                
+                if (difference <= 0) {
+                    days.textContent = '00';
+                    hours.textContent = '00';
+                    minutes.textContent = '00';
+                    seconds.textContent = '00';
+                    return;
+                }
+                
+                const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                days.textContent = d.toString().padStart(2, '0');
+                hours.textContent = h.toString().padStart(2, '0');
+                minutes.textContent = m.toString().padStart(2, '0');
+                seconds.textContent = s.toString().padStart(2, '0');
+            }
+            
+            update();
+            setInterval(update, 1000);
+        }
+        
+        // Démarrer le compte à rebours quand la page est chargée
+        document.addEventListener('DOMContentLoaded', updateCountdown);
