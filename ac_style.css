@@ -118,15 +118,26 @@
         
         /* ================== BANNIÈRE ================== */
         .news-banner {
-            background: linear-gradient(135deg, rgba(26, 79, 139, 0.8) 0%, rgba(44, 108, 176, 0.8) 100%), 
-                        url('images/ac.jpg') center/cover no-repeat;
-            height: 60vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background: url('images/ac.jpg') center/cover no-repeat;
+  height: 60vh; /* prend toute la hauteur de l’écran */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
         }
+        .news-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* rend le texte lisible */
+}
+.news-banner .content {
+  position: relative;
+  z-index: 1;
+}
         
         .news-banner h1 {
             font-weight: 800;

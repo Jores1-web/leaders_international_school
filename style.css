@@ -570,8 +570,7 @@
 /*PAGE A PRPS*/
 .about-banner {
   background: url('images/abuu.jpg') center/cover no-repeat;
-  background-attachment: fixed; /* Parallaxe */
-  height: 100vh; /* prend toute la hauteur de l’écran */
+  height: 60vh; /* prend toute la hauteur de l’écran */
   position: relative;
   display: flex;
   align-items: center;
